@@ -6,22 +6,19 @@
 
 class Solution:
     def hasCycle(self, head: ListNode) -> bool:
-        temp = head
-        reply = False
-        if temp == None:
-            return reply
-        l = [temp]
-        
-        while(True):
-            if(temp.next != None):
-                temp = temp.next
-                if(temp in l):
-                    reply = True
-                    break
-                else:
-                    l.append(temp)
-            else: 
+        node = head
+        if(node==None or node.next==None):
+            return False
+        flag=False
+        l=[]
+        while(node not in l):
+            l.append(node)
+            if(node.next!=None):
+                node = node.next
+            else:
                 break
-        return reply
-            
+        else:
+            flag = True
+
+        return flag
         
