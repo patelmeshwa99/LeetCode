@@ -1,1 +1,1 @@
-1. Insertion Sort: O(n^2)
+1. Insertion Sort: O(n²)
